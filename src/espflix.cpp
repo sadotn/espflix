@@ -27,6 +27,7 @@
 #include "font.h"
 #include "splash.h"
 
+// #include <Ps3Controller.h>
 #include <map>
 using namespace std;
 
@@ -1009,6 +1010,7 @@ public:
         }
     }
 
+// MOD KEY EVENT
     #define APPLE_MENU      0x40
     #define APPLE_PLAY      0x7A
     #define APPLE_CENTER    0x3A
@@ -1021,6 +1023,32 @@ public:
     {
         *k = 0;
         int nec = get_nec();
+        // //--- Digital cross/square/triangle/circle button events ---
+        // if( Ps3.event.button_down.select ) 
+        //     int nec = APPLE_MENU;
+
+        // if( Ps3.event.button_down.start )
+        //     int nec = APPLE_PLAY; 
+
+        // if( Ps3.event.button_down.triangle )
+        //     int nec = APPLE_DOWN;
+
+        // if( Ps3.event.button_down.circle )
+        //     int nec = APPLE_CENTER;
+
+        // //--------------- Digital D-pad button events --------------
+        // if( Ps3.event.button_down.up )
+        //     int nec = APPLE_UP;
+
+        // if( Ps3.event.button_down.right )
+        //     int nec = APPLE_RIGHT;
+
+        // if( Ps3.event.button_down.down )
+        //     int nec = APPLE_DOWN;
+
+        // if( Ps3.event.button_down.left )
+        //     int nec = APPLE_LEFT;
+            
         if (nec) {
             printf("nec:%04X\n",nec);
             switch ((nec >> 8) & 0x7F) {

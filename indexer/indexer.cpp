@@ -4,6 +4,7 @@
 //  Created by Peter Barrett on 6/29/20.
 //  Copyright © 2020 Peter Barrett. All rights reserved.
 //
+#include <Arduino.h>
 
 #include <stdio.h>
 #include <map>
